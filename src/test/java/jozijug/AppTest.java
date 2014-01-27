@@ -23,4 +23,10 @@ public class AppTest {
         tweeter.post("Hello from here!");
         verify(twitter).updateStatus("Hello from here!");
     }
+
+    @Test
+    public void shouldFailToCreateATweet() throws Exception {
+        tweeter.post("Hello from here!");
+        verify(twitter).updateStatus("Hello from here...");
+    }
 }
